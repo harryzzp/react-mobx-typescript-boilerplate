@@ -13,6 +13,8 @@ import {
   TodoFilter
 } from 'app/constants';
 
+import DevTools from 'mobx-react-devtools';
+
 export interface TodoAppProps extends RouteComponentProps<any> {
   /** MobX Stores will be injected via @inject() **/
   // [STORE_ROUTER]: RouterStore;
@@ -97,6 +99,7 @@ export class TodoApp extends React.Component<TodoAppProps, TodoAppState> {
         />
         {footer}
         {children}
+        <DevTools />
       </div>
     );
   }
